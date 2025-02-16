@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #6a11cb, #2575fc); /* Cool gradient background */
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7); /* Transparent background for header */
+            padding: 1rem;
+            color: white;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent dark overlay */
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            animation: slideIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            animation: fadeIn 2s ease-in;
+            animation-delay: 0.5s;
+        }
+
+        .btn {
+            background-color: #2575fc;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            animation: fadeIn 2s ease-in;
+            animation-delay: 1s;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #6a11cb;
+        }
+
+        /* Animation Effects */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* About Section */
+        .about {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            color: #ffcc00; /* Bright gold for contrast */
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            color: #dcdcdc; /* Light grey for text */
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            margin-top: 40px;
+            font-size: 1rem;
+        }
+
+        /* Scroll Down Indicator */
+        .scroll-down {
+            font-size: 3rem;
+            color: white;
+            animation: bounce 2s infinite;
+            margin-top: 20px;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="/skills.html">Skills</a></li>
+                <li><a href="/project.html">Projects</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to My Stylish Website</h1>
+        <p>Embrace the journey of learning, creating, and innovating with modern technologies!</p>
+        <button class="btn" id="learnMoreBtn">Learn More</button>
+        <div class="scroll-down">↓</div>
+    </section>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            Hello! I'm a passionate developer dedicated to building solutions that make a difference. I enjoy exploring new technologies, especially in web development, and sharing my knowledge with others through blogs and tutorials.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for "Learn More" button interaction
+        document.getElementById('learnMoreBtn').addEventListener('click', function() {
+            alert('You clicked on Learn More!');
+        });
+    </script>
+</body>
+</html>
