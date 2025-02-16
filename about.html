@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+        }
+        .container {
+            padding: 50px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #ffcc00;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ffcc00;
+            animation: slideIn 1s ease-in-out;
+        }
+        p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: auto;
+            line-height: 1.6;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+        <h1>Raj Kumar Chaudhari</h1>
+        <p>
+            I am a passionate Front-end Developer with experience in HTML, CSS, and JavaScript.
+            I love creating interactive and dynamic web applications with stylish animations.
+        </p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("About page loaded successfully!");
+        });
+    </script>
+</body>
+</html>
