@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .navbar:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            animation: fadeIn 1s ease-in-out;
+            color: #ffcc00;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links li {
+            display: inline;
+            opacity: 0;
+            animation: slideIn 0.5s ease-in-out forwards;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #ffcc00;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 1.8em;
+            cursor: pointer;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: rgba(0, 0, 0, 0.9);
+                width: 200px;
+                text-align: center;
+                padding: 10px;
+            }
+            .nav-links.show {
+                display: flex;
+                animation: dropdown 0.5s ease-in-out;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+        @keyframes dropdown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .profile-container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #ffcc00;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links" id="nav-links">
+            <li style="animation-delay: 0.1s;"><a href="/home.html">Home</a></li>
+            <li style="animation-delay: 0.2s;"><a href="/about.html">About</a></li>
+            <li style="animation-delay: 0.3s;"><a href="/resume.html">Resume</a></li>
+            <li style="animation-delay: 0.4s;"><a href="/services.html">Services</a></li>
+            <li style="animation-delay: 0.6s;"><a href="/portfoilo.html">Projects</a></li>
+            <li style="animation-delay: 0.7s;"><a href="/blog.html">My Blog</a></li>
+            <li style="animation-delay: 0.8s;"><a href="/contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">
+            &#9776;
+        </div>
+    </nav>
+    <div class="profile-container">
+        <img src="profile.jpg" alt="Profile Picture">
+        <h2>Raj Kumar Chaudhari</h2>
+        <p>Front-end Developer | Passionate Coder</p>
+    </div>
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("nav-links").classList.toggle("show");
+        });
+    </script>
+</body>
+</html>
