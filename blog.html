@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            padding: 1rem;
+            color: white;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Blog section */
+        .blog {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .blog h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .blog p {
+            text-align: center;
+            color: #777;
+        }
+
+        .blog-post {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-post h2 {
+            color: #333;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .read-more:hover {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="blog">
+        <h1>My Blog</h1>
+        <p>Welcome to my blog! Here, I share my thoughts on technology, programming, and development trends.</p>
+
+        <div class="blog-post">
+            <h2>Understanding the Basics of JavaScript</h2>
+            <p>JavaScript is one of the most popular programming languages in the world. In this post, I’ll walk you through its basic concepts and how to get started with it.</p>
+            <a href="https://example.com/blog-post1" target="_blank" class="read-more">Read More</a>
+        </div>
+
+        <div class="blog-post">
+            <h2>Why Learn CSS Grid?</h2>
+            <p>CSS Grid is a powerful layout system that allows for responsive, two-dimensional layouts. Let’s explore why it’s essential for modern web design.</p>
+            <a href="https://example.com/blog-post2" target="_blank" class="read-more">Read More</a>
+        </div>
+
+        <div class="blog-post">
+            <h2>My Experience with React.js</h2>
+            <p>In this post, I share my experience learning React.js and how it changed the way I build web applications. React’s component-based architecture is a game-changer!</p>
+            <a href="https://example.com/blog-post3" target="_blank" class="read-more">Read More</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Example of JavaScript for interactivity, if needed
+        const readMoreLinks = document.querySelectorAll('.read-more');
+
+        readMoreLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('You clicked to read more!');
+            });
+        });
+    </script>
+</body>
+</html>
